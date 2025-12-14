@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mock Interview Speaking Trainer (B1)</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --primary-300:#F9C97A;
+      --primary-500:#F4A329;
+      --primary-700:#B45309;
+
+      --secondary-300:#7EDAD6;
+      --secondary-500:#2BB6B4;
+      --secondary-700:#0F766E;
+
+      --bg:#FFF7F2;
+      --surface:#FFFFFF;
+      --surface-alt:#F5F7FA;
+      --border:#E6E9EF;
+
+      --text:#1F2937;
+      --text-2:#4B5563;
+      --text-muted:#6B7280;
+      --text-inverse:#FFFFFF;
+
+      --success:#2F9E44;
+      --warning:#F59F00;
+    }
+    body{
+      font-family:"Inter","Nunito",system-ui,sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.6;
+    }
+    .card{
+      background:var(--surface);
+      border:1px solid var(--border);
+      border-radius:16px;
+      box-shadow:0 4px 14px rgba(17,24,39,0.08);
+    }
+    .subcard{
+      border:1px solid var(--border);
+      border-radius:14px;
+      background:var(--surface-alt);
+    }
+    .pill{
+      padding:.7rem 1.1rem;
+      border-radius:9999px;
+      font-weight:800;
+      border:2px solid var(--primary-300);
+      color:var(--primary-700);
+      background:transparent;
+      transition:all 180ms ease;
+    }
+    .pill:hover{ background:rgba(244,163,41,.10); }
+    .pill.active{
+      background:var(--secondary-500);
+      border-color:var(--secondary-500);
+      color:var(--text-inverse);
+      box-shadow:0 4px 14px rgba(43,182,180,0.30);
+    }
+    .btn{
+      padding:.75rem 1.15rem;
+      border-radius:9999px;
+      font-weight:800;
+      border:none;
+      cursor:pointer;
+      transition:all 180ms ease;
+      color:var(--text-inverse);
+      background:var(--secondary-500);
+    }
+    .btn:hover{ filter:brightness(96%); }
+    .btn.primary{ background:var(--primary-500); }
+    .btn.ghost{
+      background:transparent;
+      color:var(--secondary-700);
+      border:2px solid var(--secondary-300);
+    }
+    .btn.ghost:hover{ background:rgba(126,218,214,.18); }
+    .btn.warn{ background:var(--warning); color:#111827; }
+    .btn:disabled{ opacity:.6; cursor:not-allowed; }
+    .mini-chip{
+      display:inline-flex;
+      gap:.5rem;
+      align-items:center;
+      padding:.35rem .7rem;
+      border-radius:9999px;
+      border:1px solid var(--border);
+      background:var(--surface-alt);
+      color:var(--text-2);
+      font-weight:700;
+      font-size:.92rem;
+      white-space:nowrap;
+    }
+    .select, .input{
+      width:100%;
+      border:2px solid var(--border);
+      border-radius:12px;
+      padding:.75rem 1rem;
+      background:var(--surface);
+      color:var(--text);
+      transition:border-color 180ms ease, box-shadow 180ms ease;
+    }
+    .select:focus, .input:focus{
+      outline:none;
+      border-color:var(--secondary-500);
+      box-shadow:0 0 0 2px var(--secondary-300);
+    }
+    .label{
+      font-weight:800;
+      color:var(--text-2);
+    }
+    .divider{ height:1px; background:var(--border); }
+    .range{ width:100%; accent-color: var(--secondary-500); }
+    .check{
+      display:flex; gap:.75rem; align-items:flex-start;
+      padding:.8rem 1rem; border:2px solid var(--border);
+      border-radius:14px; background:var(--surface);
+      cursor:pointer; user-select:none;
+      transition:all 180ms ease;
+    }
+    .check:hover{ border-color:var(--primary-300); }
+    .check input{ margin-top:.2rem; accent-color: var(--secondary-500); }
+    .topnav{
+      display:flex; justify-content:space-between; align-items:center; gap:.75rem;
+      padding: .1rem 0 .75rem 0;
+    }
+  </style>
+</head>
+
+<body class="p-4 sm:p-8">
+  <div class="max-w-4xl mx-auto">
+    <header class="text-center mb-6 sm:mb-8">
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-[var(--primary-700)]">Mock Interview Speaking Trainer</h1>
+      <p class="text-lg sm:text-xl text-[var(--text-2)]">B1 interview practice for pairs (examiner + candidate)</p>
+    </header>
+
+    <!-- SETUP WIZARD -->
+    <section id="setupView" class="card p-5 sm:p-7">
+      <!-- Step 1: Role -->
+      <div id="stepRole" class="flex flex-col gap-5">
+        <div class="text-sm font-extrabold text-[var(--text-muted)]">Step 1 / 3</div>
+        <div>
+          <div class="label mb-2">Choose role</div>
+          <div class="flex flex-wrap gap-2">
+            <button class="pill active" id="roleExaminer">Examiner</button>
+            <button class="pill" id="roleCandidate">Candidate</button>
+          </div>
+          <p class="text-sm text-[var(--text-muted)] mt-2">Examiner controls the flow. Candidate answers.</p>
+        </div>
+
+        <div class="flex justify-end">
+          <button id="toModeBtn" class="btn primary">Next</button>
+        </div>
+      </div>
+
+      <!-- Step 2: Mode -->
+      <div id="stepMode" class="hidden flex flex-col gap-5">
+        <div class="text-sm font-extrabold text-[var(--text-muted)]">Step 2 / 3</div>
+        <div>
+          <div class="label mb-2">Choose mode</div>
+          <div class="flex flex-wrap gap-2">
+            <button class="pill active" id="modeMock">Mock exam (timer)</button>
+            <button class="pill" id="modePractice">Practice (no timer)</button>
+          </div>
+          <p class="text-sm text-[var(--text-muted)] mt-2">Mock exam moves you along with a timer.</p>
+        </div>
+
+        <div class="flex justify-between gap-3">
+          <button id="backToRoleBtn" class="btn ghost">Back</button>
+          <button id="toTopicsBtn" class="btn primary">Next</button>
+        </div>
+      </div>
+
+      <!-- Step 3: Topics + round settings -->
+      <div id="stepTopics" class="hidden flex flex-col gap-5">
+        <div class="text-sm font-extrabold text-[var(--text-muted)]">Step 3 / 3</div>
+
+        <div>
+          <div class="label mb-3">Choose topics (pick 2–4)</div>
+          <div class="grid sm:grid-cols-2 gap-3">
+            <label class="check">
+              <input type="checkbox" class="topicCheck" value="personality_family" checked />
+              <div>
+                <div class="font-extrabold">Personality & family</div>
+                <div class="text-sm text-[var(--text-muted)]">personal traits, relationships</div>
+              </div>
+            </label>
+
+            <label class="check">
+              <input type="checkbox" class="topicCheck" value="home_area" checked />
+              <div>
+                <div class="font-extrabold">Home & area</div>
+                <div class="text-sm text-[var(--text-muted)]">neighbourhood, town, home</div>
+              </div>
+            </label>
+
+            <label class="check">
+              <input type="checkbox" class="topicCheck" value="health_sports" />
+              <div>
+                <div class="font-extrabold">Health & sports</div>
+                <div class="text-sm text-[var(--text-muted)]">habits, sport, wellbeing</div>
+              </div>
+            </label>
+
+            <label class="check">
+              <input type="checkbox" class="topicCheck" value="daily_routine" />
+              <div>
+                <div class="font-extrabold">Daily routine</div>
+                <div class="text-sm text-[var(--text-muted)]">typical day, time use</div>
+              </div>
+            </label>
+          </div>
+
+          <div id="topicWarn" class="hidden mt-3 text-sm font-bold text-[var(--warning)]">
+            Please choose at least 2 topics.
+          </div>
+        </div>
+
+        <div class="grid sm:grid-cols-2 gap-4">
+          <div>
+            <div class="label mb-2">Questions in this round</div>
+            <select id="countSelect" class="select">
+              <option value="6">6 questions</option>
+              <option value="8">8 questions</option>
+              <option value="10" selected>10 questions</option>
+              <option value="12">12 questions</option>
+              <option value="16">16 questions</option>
+            </select>
+            <p class="text-sm text-[var(--text-muted)] mt-2">Total questions are mixed from your chosen topics.</p>
+          </div>
+
+          <div id="timerBox">
+            <div class="label mb-2">Time per question</div>
+            <select id="timeSelect" class="select">
+              <option value="45">45 seconds</option>
+              <option value="60" selected>60 seconds</option>
+              <option value="75">75 seconds</option>
+              <option value="90">90 seconds</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="flex justify-between gap-3">
+          <button id="backToModeBtn" class="btn ghost">Back</button>
+          <button id="startBtn" class="btn primary">Start round</button>
+        </div>
+
+        <div class="text-sm text-[var(--text-muted)]">
+          Tip: start as examiner, then swap roles after scoring.
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERVIEW -->
+    <section id="interviewView" class="hidden card p-5 sm:p-7">
+      <div class="topnav">
+        <div class="flex flex-wrap gap-2 items-center">
+          <span class="mini-chip" id="chipTopic">Topic: —</span>
+          <span class="mini-chip" id="chipRole">Role: —</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <button id="btnMainTop" class="btn ghost">Main page</button>
+          <span class="mini-chip" id="chipProgress">Question — / —</span>
+          <span class="mini-chip hidden" id="chipTimer">Time: —</span>
+        </div>
+      </div>
+
+      <div class="divider mb-4"></div>
+
+      <div class="card p-5 sm:p-6 !shadow-none !border-2 border-[var(--border)]">
+        <div class="text-sm font-extrabold text-[var(--text-muted)] mb-2">Question</div>
+        <div id="questionText" class="text-xl sm:text-2xl font-extrabold text-[var(--text)]">—</div>
+
+        <div id="followUpWrap" class="mt-4 hidden">
+          <div class="text-sm font-extrabold text-[var(--text-muted)] mb-2">Follow-up</div>
+          <div id="followUpText" class="text-lg font-semibold text-[var(--secondary-700)]">—</div>
+        </div>
+
+        <div class="mt-5 flex flex-wrap gap-3">
+          <button id="btnNext" class="btn primary">Next</button>
+          <button id="btnFollow" class="btn ghost">Follow-up</button>
+          <button id="btnRephrase" class="btn ghost">Rephrase</button>
+          <button id="btnEndNow" class="btn warn">End round</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCORING -->
+    <section id="scoreView" class="hidden card p-5 sm:p-7 mt-6">
+      <div class="topnav">
+        <div>
+          <h2 class="text-2xl font-extrabold text-[var(--primary-700)]">Candidate scoring</h2>
+          <p class="text-[var(--text-2)]">Examiner rates the performance.</p>
+        </div>
+        <div class="flex items-center gap-2">
+          <button id="btnMainScore" class="btn ghost">Main page</button>
+          <span class="mini-chip" id="scoreTopicChip">Topics: —</span>
+        </div>
+      </div>
+
+      <div class="divider my-4"></div>
+
+      <div class="grid gap-4">
+        <div class="subcard p-4">
+          <div class="flex justify-between items-center gap-3">
+            <div class="font-extrabold">1) Grammar <span class="text-[var(--text-muted)] font-semibold">(1–5)</span></div>
+            <div class="mini-chip"><span id="valGrammar">3</span>/5</div>
+          </div>
+          <input id="rngGrammar" class="range" type="range" min="1" max="5" value="3"/>
+          <div class="text-sm text-[var(--text-muted)] mt-2">Good grammar, not many mistakes.</div>
+        </div>
+
+        <div class="subcard p-4">
+          <div class="flex justify-between items-center gap-3">
+            <div class="font-extrabold">2) Fluency <span class="text-[var(--text-muted)] font-semibold">(1–5)</span></div>
+            <div class="mini-chip"><span id="valFluency">3</span>/5</div>
+          </div>
+          <input id="rngFluency" class="range" type="range" min="1" max="5" value="3"/>
+          <div class="text-sm text-[var(--text-muted)] mt-2">Spoke without a lot of stops.</div>
+        </div>
+
+        <div class="subcard p-4">
+          <div class="flex justify-between items-center gap-3">
+            <div class="font-extrabold">3) Topic <span class="text-[var(--text-muted)] font-semibold">(1–5)</span></div>
+            <div class="mini-chip"><span id="valTopic">3</span>/5</div>
+          </div>
+          <input id="rngTopic" class="range" type="range" min="1" max="5" value="3"/>
+          <div class="text-sm text-[var(--text-muted)] mt-2">Answered the question, and something else.</div>
+        </div>
+
+        <div class="subcard p-4">
+          <div class="flex justify-between items-center gap-3">
+            <div class="font-extrabold">4) Vocabulary <span class="text-[var(--text-muted)] font-semibold">(1–5)</span></div>
+            <div class="mini-chip"><span id="valVocab">3</span>/5</div>
+          </div>
+          <input id="rngVocab" class="range" type="range" min="1" max="5" value="3"/>
+          <div class="text-sm text-[var(--text-muted)] mt-2">Used some difficult/topic words.</div>
+        </div>
+
+        <div class="subcard p-4">
+          <div class="flex justify-between items-center gap-3">
+            <div class="font-extrabold">5) Pronunciation <span class="text-[var(--text-muted)] font-semibold">(1–2)</span></div>
+            <div class="mini-chip"><span id="valPron">1</span>/2</div>
+          </div>
+          <input id="rngPron" class="range" type="range" min="1" max="2" value="1"/>
+          <div class="text-sm text-[var(--text-muted)] mt-2">Clear speech, easy to understand.</div>
+        </div>
+      </div>
+
+      <div class="subcard p-4 mt-4">
+        <div class="flex flex-wrap justify-between items-center gap-3">
+          <div class="font-extrabold text-[var(--secondary-700)]">Total</div>
+          <div class="mini-chip"><span id="totalScore">13</span> points</div>
+        </div>
+        <p class="text-sm text-[var(--text-muted)] mt-2">Max score: 22 points.</p>
+      </div>
+
+      <div class="flex flex-col sm:flex-row gap-3 sm:justify-between sm:items-center mt-4">
+        <button id="btnSaveScore" class="btn primary">Save score</button>
+        <div class="flex flex-wrap gap-2">
+          <button id="btnSwapRoles" class="btn">Swap roles</button>
+          <button id="btnNewRound" class="btn ghost">New round</button>
+        </div>
+      </div>
+
+      <div id="savedBox" class="hidden subcard p-4 mt-4">
+        <div class="font-extrabold text-[var(--success)]">Saved.</div>
+        <div class="text-sm text-[var(--text-2)] mt-1">
+          Saved locally in this browser (no backend). Copy the last result if needed.
+        </div>
+        <textarea id="lastResult" class="input mt-3" rows="4" readonly></textarea>
+        <div class="mt-3 flex flex-wrap gap-2">
+          <button id="btnCopy" class="btn ghost">Copy</button>
+          <button id="btnClear" class="btn warn">Clear saved scores</button>
+        </div>
+      </div>
+    </section>
+
+    <footer class="text-center mt-6 text-sm text-[var(--text-muted)]">
+      Single-file classroom tool (no login, no backend).
+    </footer>
+  </div>
+
+<script>
+/* =========================
+   Question DB (10 each)
+   ========================= */
+const DB = {
+  personality_family: [
+    {q:"How would you describe your personality in three words?", re:"Describe yourself in three words.",
+     f:["Why did you choose those words?","Can you give a real example?"]},
+    {q:"Are you more like your mother or your father? In what way?", re:"Are you similar to your mother or father?",
+     f:["What is one thing you share?","Is that good or bad? Why?"]},
+    {q:"What is one thing your family does together every week?", re:"What do you do together as a family?",
+     f:["Who usually starts it?","Do you enjoy it? Why?"]},
+    {q:"Who do you talk to when you have a problem? Why?", re:"Who helps you when you have a problem?",
+     f:["What kind of problems?","Do you prefer talking or texting?"]},
+    {q:"Are you more quiet or more talkative at home? Why?", re:"At home, are you quiet or talkative?",
+     f:["Is it different at school?","What makes you change?"]},
+    {q:"What is one good habit you learned from your family?", re:"What good habit did your family teach you?",
+     f:["How do you use it today?","Do you want to teach it to others?"]},
+    {q:"Do you think personality can change as you grow older? Why / why not?", re:"Can people change their personality?",
+     f:["What can change it?","Have you changed?"]},
+    {q:"Who is the funniest person in your family? What makes them funny?", re:"Who is the funniest in your family?",
+     f:["Tell me a funny moment.","Are they funny on purpose?"]},
+    {q:"How is your personality different with friends and with family?", re:"Are you different with friends vs family?",
+     f:["Why is it different?","Which ‘you’ is the real one?"]},
+    {q:"What is one thing you would like your family to understand better about you?", re:"What should your family understand about you?",
+     f:["How could you tell them?","What would change?"]}
+  ],
+  home_area: [
+    {q:"Do you live in a flat or a house? What do you like about it?", re:"Do you live in a flat or a house? What’s good about it?",
+     f:["What don’t you like?","What is your favourite room?"]},
+    {q:"What is your neighbourhood like: quiet, busy, friendly, boring?", re:"Describe your neighbourhood.",
+     f:["What do people do there?","Is it safe?"]},
+    {q:"Is there a place near your home where you like to spend time?", re:"Where do you like to go near your home?",
+     f:["Who do you go with?","What do you do there?"]},
+    {q:"What do you like most about the town or village where you live?", re:"What’s the best thing about your town/village?",
+     f:["What’s the worst thing?","Would you recommend it?"]},
+    {q:"What is one problem in your neighbourhood?", re:"What problem does your neighbourhood have?",
+     f:["How could it be solved?","Does it affect you?"]},
+    {q:"Do you know your neighbours well, or not really?", re:"Do you know your neighbours?",
+     f:["Is that common where you live?","Would you like to know them better?"]},
+    {q:"Is your home more for relaxing or for studying? Why?", re:"At home, do you relax or study more?",
+     f:["Where do you study?","What helps you focus?"]},
+    {q:"How far is your school from your home, and how do you get there?", re:"How do you travel to school?",
+     f:["How long does it take?","Do you like the journey?"]},
+    {q:"Would you like to live somewhere else in the future? Where?", re:"Would you move in the future? Where?",
+     f:["City or countryside?","Why there?"]},
+    {q:"What would you change about your home or neighbourhood if you could?", re:"If you could change one thing, what would it be?",
+     f:["Why that change?","How would it help people?"]}
+  ],
+  health_sports: [
+    {q:"What do you do to stay healthy?", re:"How do you stay healthy?",
+     f:["What’s easy for you?","What’s difficult?"]},
+    {q:"Do you play any sport or do any regular exercise? Why / why not?", re:"Do you do sport? Why / why not?",
+     f:["How often?","With friends or alone?"]},
+    {q:"What is your favourite sport to watch and to do?", re:"What sport do you like to watch and do?",
+     f:["Why that sport?","Who do you watch?"]},
+    {q:"How important is sleep for you on school days?", re:"Is sleep important for you on school days?",
+     f:["How many hours do you get?","What happens if you sleep less?"]},
+    {q:"What food do you think is healthy but you don’t really like?", re:"What healthy food do you dislike?",
+     f:["Why don’t you like it?","How could you eat it?"]},
+    {q:"How much time do you spend sitting every day?", re:"How much do you sit every day?",
+     f:["When do you sit the most?","How could you move more?"]},
+    {q:"What do you do when you feel stressed or tired?", re:"What helps you when you’re stressed or tired?",
+     f:["Does sport help?","Do you talk to someone?"]},
+    {q:"Is competition good or bad in sports? Why?", re:"Is competition good or bad in sport?",
+     f:["When is it too much?","What about school sports?"]},
+    {q:"Do you think teenagers have enough exercise today? Why / why not?", re:"Do teenagers exercise enough today?",
+     f:["What stops them?","What could schools do?"]},
+    {q:"What small change could make your lifestyle healthier?", re:"What small change would help your health?",
+     f:["Would you really do it?","When will you start?"]}
+  ],
+  daily_routine: [
+    {q:"What time do you usually wake up on school days?", re:"When do you wake up on school days?",
+     f:["Is it easy for you?","What time do you go to bed?"]},
+    {q:"What is the first thing you do in the morning?", re:"What do you do first in the morning?",
+     f:["Do you eat breakfast?","Do you check your phone?"]},
+    {q:"What part of the school day do you like the most? Why?", re:"Which part of school do you like most?",
+     f:["What subject is it?","What makes it good?"]},
+    {q:"What do you usually do after school?", re:"What do you do after school?",
+     f:["Do you have clubs?","Do you rest first?"]},
+    {q:"How much time do you spend on homework every day?", re:"How long do you do homework?",
+     f:["Which subject takes longest?","Do you study well at home?"]},
+    {q:"How much time do you spend on your phone or computer?", re:"How long are you on your phone/computer?",
+     f:["What do you do there?","Is it too much?"]},
+    {q:"What do you do in the evening to relax?", re:"How do you relax in the evening?",
+     f:["Alone or with others?","Does it help you sleep?"]},
+    {q:"Is your daily routine the same every day, or different?", re:"Is your routine the same or different?",
+     f:["What changes it?","Weekdays vs weekends?"]},
+    {q:"What is one thing you waste too much time on?", re:"What do you waste time on?",
+     f:["Why do you do it?","How could you reduce it?"]},
+    {q:"What would your perfect weekday look like?", re:"Describe your perfect weekday.",
+     f:["What would you change?","What would you keep?"]}
+  ]
+};
+
+/* =========================
+   State
+   ========================= */
+const state = {
+  role: "examiner",        // examiner | candidate
+  mode: "mock",            // mock | practice
+  topics: ["personality_family","home_area"],
+  count: 10,
+  secondsPerQ: 60,
+  order: [],               // [{topicKey, idx}]
+  i: 0,
+  showingFollow: false,
+  timer: null,
+  remaining: 0
+};
+
+const el = {
+  setupView: document.getElementById("setupView"),
+  interviewView: document.getElementById("interviewView"),
+  scoreView: document.getElementById("scoreView"),
+
+  stepRole: document.getElementById("stepRole"),
+  stepMode: document.getElementById("stepMode"),
+  stepTopics: document.getElementById("stepTopics"),
+
+  roleExaminer: document.getElementById("roleExaminer"),
+  roleCandidate: document.getElementById("roleCandidate"),
+  modeMock: document.getElementById("modeMock"),
+  modePractice: document.getElementById("modePractice"),
+
+  toModeBtn: document.getElementById("toModeBtn"),
+  backToRoleBtn: document.getElementById("backToRoleBtn"),
+  toTopicsBtn: document.getElementById("toTopicsBtn"),
+  backToModeBtn: document.getElementById("backToModeBtn"),
+
+  topicChecks: Array.from(document.querySelectorAll(".topicCheck")),
+  topicWarn: document.getElementById("topicWarn"),
+  countSelect: document.getElementById("countSelect"),
+  timeSelect: document.getElementById("timeSelect"),
+  timerBox: document.getElementById("timerBox"),
+  startBtn: document.getElementById("startBtn"),
+
+  btnMainTop: document.getElementById("btnMainTop"),
+  btnMainScore: document.getElementById("btnMainScore"),
+
+  chipTopic: document.getElementById("chipTopic"),
+  chipRole: document.getElementById("chipRole"),
+  chipProgress: document.getElementById("chipProgress"),
+  chipTimer: document.getElementById("chipTimer"),
+
+  questionText: document.getElementById("questionText"),
+  followUpWrap: document.getElementById("followUpWrap"),
+  followUpText: document.getElementById("followUpText"),
+
+  btnNext: document.getElementById("btnNext"),
+  btnFollow: document.getElementById("btnFollow"),
+  btnRephrase: document.getElementById("btnRephrase"),
+  btnEndNow: document.getElementById("btnEndNow"),
+
+  scoreTopicChip: document.getElementById("scoreTopicChip"),
+  rngGrammar: document.getElementById("rngGrammar"),
+  rngFluency: document.getElementById("rngFluency"),
+  rngTopic: document.getElementById("rngTopic"),
+  rngVocab: document.getElementById("rngVocab"),
+  rngPron: document.getElementById("rngPron"),
+
+  valGrammar: document.getElementById("valGrammar"),
+  valFluency: document.getElementById("valFluency"),
+  valTopic: document.getElementById("valTopic"),
+  valVocab: document.getElementById("valVocab"),
+  valPron: document.getElementById("valPron"),
+  totalScore: document.getElementById("totalScore"),
+
+  btnSaveScore: document.getElementById("btnSaveScore"),
+  btnSwapRoles: document.getElementById("btnSwapRoles"),
+  btnNewRound: document.getElementById("btnNewRound"),
+  savedBox: document.getElementById("savedBox"),
+  lastResult: document.getElementById("lastResult"),
+  btnCopy: document.getElementById("btnCopy"),
+  btnClear: document.getElementById("btnClear")
+};
+
+function prettyTopic(key){
+  return {
+    personality_family:"Personality & family",
+    home_area:"Home & area",
+    health_sports:"Health & sports",
+    daily_routine:"Daily routine"
+  }[key] || key;
+}
+function prettyRole(r){ return r === "examiner" ? "Examiner" : "Candidate"; }
+
+function setPill(activeBtn, otherBtn){
+  activeBtn.classList.add("active");
+  otherBtn.classList.remove("active");
+}
+
+function showWizard(step){
+  el.stepRole.classList.toggle("hidden", step !== "role");
+  el.stepMode.classList.toggle("hidden", step !== "mode");
+  el.stepTopics.classList.toggle("hidden", step !== "topics");
+}
+
+function showView(which){
+  el.setupView.classList.toggle("hidden", which !== "setup");
+  el.interviewView.classList.toggle("hidden", which !== "interview");
+  el.scoreView.classList.toggle("hidden", which !== "score");
+}
+
+function shuffle(a){
+  const arr = a.slice();
+  for (let i = arr.length - 1; i > 0; i--){
+    const j = Math.floor(Math.random()*(i+1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
+}
+
+function selectedTopics(){
+  return el.topicChecks.filter(c => c.checked).map(c => c.value);
+}
+
+function validateTopics(){
+  const chosen = selectedTopics();
+  const ok = chosen.length >= 2 && chosen.length <= 4;
+  el.topicWarn.classList.toggle("hidden", ok);
+  return ok;
+}
+
+function buildRound(){
+  // Create combined pool: all questions from selected topics
+  const chosen = state.topics.slice();
+  const pool = [];
+  chosen.forEach(t => {
+    DB[t].forEach((_, idx) => pool.push({topicKey:t, idx}));
+  });
+
+  // If count is larger than pool size, clamp it
+  const max = pool.length;
+  const wanted = Math.min(state.count, max);
+  state.order = shuffle(pool).slice(0, wanted);
+  state.i = 0;
+  state.showingFollow = false;
+}
+
+function stopTimer(){
+  if (state.timer){
+    clearInterval(state.timer);
+    state.timer = null;
+  }
+}
+
+function updateTimerChip(){
+  if (state.mode !== "mock"){
+    el.chipTimer.classList.add("hidden");
+    return;
+  }
+  el.chipTimer.classList.remove("hidden");
+  const mm = Math.floor(state.remaining/60);
+  const ss = String(state.remaining%60).padStart(2,"0");
+  el.chipTimer.textContent = `Time: ${mm}:${ss}`;
+}
+
+function startTimer(){
+  stopTimer();
+  if (state.mode !== "mock") return;
+  state.remaining = state.secondsPerQ;
+  updateTimerChip();
+  state.timer = setInterval(() => {
+    state.remaining--;
+    updateTimerChip();
+    if (state.remaining <= 0){
+      stopTimer();
+      state.showingFollow = false;
+      if (state.i < state.order.length - 1){
+        state.i++;
+        renderQuestion();
+      } else {
+        endRoundToScoring();
+      }
+    }
+  }, 1000);
+}
+
+function renderQuestion(){
+  const pick = state.order[state.i];
+  const item = DB[pick.topicKey][pick.idx];
+
+  el.questionText.textContent = item.q;
+  el.followUpWrap.classList.add("hidden");
+  el.followUpText.textContent = item.f[0] || "—";
+
+  el.chipTopic.textContent = `Topic: ${prettyTopic(pick.topicKey)}`;
+  el.chipRole.textContent = `Role: ${prettyRole(state.role)}`;
+  el.chipProgress.textContent = `Question ${state.i+1} / ${state.order.length}`;
+
+  startTimer();
+}
+
+function startRound(){
+  buildRound();
+  showView("interview");
+  renderQuestion();
+}
+
+function updateScoreUI(){
+  el.valGrammar.textContent = el.rngGrammar.value;
+  el.valFluency.textContent = el.rngFluency.value;
+  el.valTopic.textContent = el.rngTopic.value;
+  el.valVocab.textContent = el.rngVocab.value;
+  el.valPron.textContent = el.rngPron.value;
+
+  const total =
+    Number(el.rngGrammar.value) +
+    Number(el.rngFluency.value) +
+    Number(el.rngTopic.value) +
+    Number(el.rngVocab.value) +
+    Number(el.rngPron.value);
+
+  el.totalScore.textContent = total;
+}
+
+function endRoundToScoring(){
+  stopTimer();
+  el.rngGrammar.value = 3;
+  el.rngFluency.value = 3;
+  el.rngTopic.value = 3;
+  el.rngVocab.value = 3;
+  el.rngPron.value = 1;
+  updateScoreUI();
+  el.savedBox.classList.add("hidden");
+
+  const topicsText = state.topics.map(prettyTopic).join(", ");
+  el.scoreTopicChip.textContent = `Topics: ${topicsText}`;
+
+  showView("score");
+}
+
+function saveScore(){
+  const record = {
+    ts: new Date().toISOString(),
+    topics: state.topics.map(prettyTopic),
+    mode: state.mode,
+    rubric: {
+      grammar: Number(el.rngGrammar.value),
+      fluency: Number(el.rngFluency.value),
+      topic: Number(el.rngTopic.value),
+      vocabulary: Number(el.rngVocab.value),
+      pronunciation: Number(el.rngPron.value)
+    },
+    total: Number(el.totalScore.textContent)
+  };
+
+  const key = "mockInterviewScores_v2";
+  const existing = JSON.parse(localStorage.getItem(key) || "[]");
+  existing.push(record);
+  localStorage.setItem(key, JSON.stringify(existing));
+
+  el.lastResult.value = JSON.stringify(record, null, 2);
+  el.savedBox.classList.remove("hidden");
+}
+
+function clearScores(){
+  localStorage.removeItem("mockInterviewScores_v2");
+  el.savedBox.classList.add("hidden");
+}
+
+/* =========================
+   Wizard navigation
+   ========================= */
+el.toModeBtn.addEventListener("click", () => showWizard("mode"));
+el.backToRoleBtn.addEventListener("click", () => showWizard("role"));
+el.toTopicsBtn.addEventListener("click", () => showWizard("topics"));
+el.backToModeBtn.addEventListener("click", () => showWizard("mode"));
+
+/* Role selection */
+el.roleExaminer.addEventListener("click", () => {
+  state.role = "examiner";
+  setPill(el.roleExaminer, el.roleCandidate);
+});
+el.roleCandidate.addEventListener("click", () => {
+  state.role = "candidate";
+  setPill(el.roleCandidate, el.roleExaminer);
+});
+
+/* Mode selection */
+el.modeMock.addEventListener("click", () => {
+  state.mode = "mock";
+  setPill(el.modeMock, el.modePractice);
+  el.timerBox.classList.remove("hidden");
+});
+el.modePractice.addEventListener("click", () => {
+  state.mode = "practice";
+  setPill(el.modePractice, el.modeMock);
+  el.timerBox.classList.add("hidden");
+});
+
+/* Topics selection */
+el.topicChecks.forEach(c => c.addEventListener("change", () => {
+  validateTopics();
+}));
+
+/* Round settings */
+el.countSelect.addEventListener("change", (e) => state.count = Number(e.target.value));
+el.timeSelect.addEventListener("change", (e) => state.secondsPerQ = Number(e.target.value));
+
+/* Start */
+el.startBtn.addEventListener("click", () => {
+  const chosen = selectedTopics();
+  state.topics = chosen;
+  if (!validateTopics()) return;
+  startRound();
+});
+
+/* Interview actions */
+el.btnNext.addEventListener("click", () => {
+  stopTimer();
+  state.showingFollow = false;
+  if (state.i < state.order.length - 1){
+    state.i++;
+    renderQuestion();
+  } else {
+    endRoundToScoring();
+  }
+});
+
+el.btnFollow.addEventListener("click", () => {
+  const pick = state.order[state.i];
+  const item = DB[pick.topicKey][pick.idx];
+  state.showingFollow = !state.showingFollow;
+  el.followUpWrap.classList.toggle("hidden", !state.showingFollow);
+  if (item.f && item.f.length){
+    el.followUpText.textContent = item.f[Math.floor(Math.random() * item.f.length)];
+  } else {
+    el.followUpText.textContent = "—";
+  }
+});
+
+el.btnRephrase.addEventListener("click", () => {
+  const pick = state.order[state.i];
+  const item = DB[pick.topicKey][pick.idx];
+  el.questionText.textContent = (el.questionText.textContent === item.q) ? item.re : item.q;
+});
+
+el.btnEndNow.addEventListener("click", endRoundToScoring);
+
+/* Main page buttons */
+function goMain(){
+  stopTimer();
+  showView("setup");
+  showWizard("role");
+}
+el.btnMainTop.addEventListener("click", goMain);
+el.btnMainScore.addEventListener("click", goMain);
+
+/* Scoring */
+[el.rngGrammar, el.rngFluency, el.rngTopic, el.rngVocab, el.rngPron].forEach(r => r.addEventListener("input", updateScoreUI));
+el.btnSaveScore.addEventListener("click", saveScore);
+el.btnSwapRoles.addEventListener("click", () => {
+  state.role = (state.role === "examiner") ? "candidate" : "examiner";
+  if (state.role === "examiner") setPill(el.roleExaminer, el.roleCandidate);
+  else setPill(el.roleCandidate, el.roleExaminer);
+  // keep same wizard selections; start new round immediately
+  startRound();
+});
+el.btnNewRound.addEventListener("click", goMain);
+
+el.btnCopy.addEventListener("click", async () => {
+  try{
+    await navigator.clipboard.writeText(el.lastResult.value);
+    el.btnCopy.textContent = "Copied!";
+    setTimeout(()=> el.btnCopy.textContent = "Copy", 900);
+  } catch(e){
+    el.btnCopy.textContent = "Copy failed";
+    setTimeout(()=> el.btnCopy.textContent = "Copy", 900);
+  }
+});
+el.btnClear.addEventListener("click", clearScores);
+
+/* Init */
+(function init(){
+  // Ensure state reflects default UI
+  state.count = Number(el.countSelect.value);
+  state.secondsPerQ = Number(el.timeSelect.value);
+  state.topics = selectedTopics();
+  validateTopics();
+  updateScoreUI();
+  showWizard("role");
+})();
+</script>
+</body>
+</html>
