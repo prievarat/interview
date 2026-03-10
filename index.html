@@ -124,14 +124,18 @@
       display:flex; justify-content:space-between; align-items:center; gap:.75rem;
       padding: .1rem 0 .75rem 0;
     }
+    /* New styling for expression hints */
     .vocab-pill {
-      display:inline-block;
-      padding: 0.3rem 0.8rem;
+      display:block;
+      width: 100%;
+      padding: 0.8rem 1rem;
       border-radius: 8px;
-      background: #E0F2FE;
-      color: #0369A1;
-      font-weight: 700;
-      font-size: 0.85rem;
+      background: rgba(43, 182, 180, 0.1); /* Light secondary-500 */
+      border-left: 4px solid var(--secondary-500);
+      color: var(--secondary-700);
+      font-weight: 600;
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
     }
   </style>
 </head>
@@ -183,7 +187,7 @@
         <div class="text-sm font-extrabold text-[var(--text-muted)]">Step 3 / 3</div>
 
         <div>
-          <div class="label mb-3">Choose topics (pick 2–4)</div>
+          <div class="label mb-3">Choose topics (pick at least 1)</div>
           <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
             <label class="check"><input type="checkbox" class="topicCheck" value="personality_family" checked /><div><div class="font-extrabold">Personality & Family</div></div></label>
             <label class="check"><input type="checkbox" class="topicCheck" value="home_area" checked /><div><div class="font-extrabold">Home & Area</div></div></label>
@@ -198,7 +202,7 @@
           </div>
 
           <div id="topicWarn" class="hidden mt-3 text-sm font-bold text-[var(--warning)]">
-            Please choose at least 2 topics.
+            Please choose at least 1 topic.
           </div>
         </div>
 
@@ -211,6 +215,7 @@
               <option value="10" selected>10 questions</option>
               <option value="12">12 questions</option>
               <option value="16">16 questions</option>
+              <option value="50">Marathon (50 max)</option>
             </select>
           </div>
 
@@ -256,16 +261,16 @@
           <div id="followUpText" class="text-lg font-semibold text-[var(--secondary-700)]">—</div>
         </div>
 
-        <div id="vocabWrap" class="mt-6 p-4 rounded-xl bg-blue-50/50 border border-blue-100 hidden">
-          <div class="text-sm font-extrabold text-[var(--text-muted)] mb-2">Useful Phrases & Vocabulary</div>
-          <div id="vocabList" class="flex flex-wrap gap-2">
+        <div id="vocabWrap" class="mt-6 hidden transition-all">
+          <div class="text-sm font-extrabold text-[var(--secondary-700)] mb-2">💡 Sentence Starters</div>
+          <div id="vocabList" class="flex flex-col gap-2">
             </div>
         </div>
 
         <div class="mt-5 flex flex-wrap gap-3">
           <button id="btnNext" class="btn primary">Next</button>
           <button id="btnFollow" class="btn ghost">Follow-up</button>
-          <button id="btnVocab" class="btn ghost">Show hints</button>
+          <button id="btnVocab" class="btn ghost" style="border-color: var(--secondary-500); color: var(--secondary-500);">💡 Need a hint?</button>
           <button id="btnRephrase" class="btn ghost">Rephrase</button>
           <button id="btnEndNow" class="btn warn">End round</button>
         </div>
@@ -484,10 +489,12 @@ function selectedTopics(){
   return el.topicChecks.filter(c => c.checked).map(c => c.value);
 }
 
+// CHANGED: Validation now only requires at least 1 topic selected.
 function validateTopics(){
   const chosen = selectedTopics();
-  const ok = chosen.length >= 2 && chosen.length <= 4;
+  const ok = chosen.length >= 1;
   el.topicWarn.classList.toggle("hidden", ok);
+  el.startBtn.disabled = !ok;
   return ok;
 }
 
@@ -559,7 +566,16 @@ function renderQuestion(){
   el.followUpText.textContent = item.f[0] || "—";
 
   el.vocabWrap.classList.add("hidden");
-  el.vocabList.innerHTML = item.v.map(word => `<span class="vocab-pill">${word}</span>`).join("");
+  
+  // CHANGED: Now pulls 2 random expressions from the new 'expressions' array in db.json
+  if (item.expressions && item.expressions.length > 0) {
+      const shuffledExpr = shuffle(item.expressions).slice(0, 2);
+      el.vocabList.innerHTML = shuffledExpr.map(exp => `<span class="vocab-pill">"${exp}"</span>`).join("");
+      el.btnVocab.classList.remove("hidden");
+  } else {
+      el.vocabList.innerHTML = "<span class='vocab-pill'>No hints available for this question.</span>";
+      el.btnVocab.classList.add("hidden"); // Hide button if no expressions exist
+  }
 
   el.chipTopic.textContent = `Topic: ${prettyTopic(pick.topicKey)}`;
   el.chipRole.textContent = `Role: ${prettyRole(state.role)}`;
