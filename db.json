@@ -1,0 +1,1222 @@
+{
+  "personality_family": [
+    {
+      "q": "How would you describe your personality in three words?",
+      "re": "Describe yourself in three words.",
+      "f": ["Why did you choose those words?", "Can you give a real example?"],
+      "expressions": [
+        "Well, I would definitely describe myself as friendly and outgoing.",
+        "Actually, most people say that I am quite hard-working.",
+        "That's an interesting question; I suppose I am a very calm person.",
+        "To be honest, I can be a bit shy when I meet new people.",
+        "Let me think for a second... I am usually very cheerful."
+      ]
+    },
+    {
+      "q": "Are you more like your mother or your father? In what way?",
+      "re": "Are you similar to your mother or father?",
+      "f": ["What is one thing you share?", "Is that good or bad? Why?"],
+      "expressions": [
+        "Actually, I think I am much more like my mother.",
+        "Well, we both share the same sense of humour.",
+        "To tell the truth, I have my father's patience.",
+        "I would say I look like my dad, but my personality is like my mum's.",
+        "That is a good question; we are both very organized people."
+      ]
+    },
+    {
+      "q": "What is one thing your family does together every week?",
+      "re": "What do you do together as a family?",
+      "f": ["Who usually starts it?", "Do you enjoy it? Why?"],
+      "expressions": [
+        "Well, we usually have a big family lunch on Sundays.",
+        "Actually, we love watching a film together on Friday nights.",
+        "To be honest, we always go for a long walk in the park.",
+        "I suppose the main thing is that we play board games.",
+        "Let me think... we always cook dinner together at the weekend."
+      ]
+    },
+    {
+      "q": "Who do you talk to when you have a problem? Why?",
+      "re": "Who helps you when you have a problem?",
+      "f": ["What kind of problems?", "Do you prefer talking or texting?"],
+      "expressions": [
+        "Actually, I always talk to my best friend because she listens well.",
+        "Well, I usually ask my older brother for advice.",
+        "To be honest, my parents are the best people to help me.",
+        "That's an interesting question; it depends on the problem.",
+        "I would say I prefer to solve problems by myself first."
+      ]
+    },
+    {
+      "q": "Are you more quiet or more talkative at home? Why?",
+      "re": "At home, are you quiet or talkative?",
+      "f": ["Is it different at school?", "What makes you change?"],
+      "expressions": [
+        "Well, I am definitely more talkative when I am at home.",
+        "Actually, I am quite quiet because I like to relax in my room.",
+        "To tell the truth, I talk a lot with my siblings.",
+        "I suppose it depends on my mood after school.",
+        "Let me think... I am usually the loudest person in the house!"
+      ]
+    },
+    {
+      "q": "What is one good habit you learned from your family?",
+      "re": "What good habit did your family teach you?",
+      "f": ["How do you use it today?", "Do you want to teach it to others?"],
+      "expressions": [
+        "Actually, my parents taught me to always be on time.",
+        "Well, I learned how to save my pocket money carefully.",
+        "That's a great question; they taught me to be polite to everyone.",
+        "To be honest, my family showed me the importance of reading.",
+        "I would say the best habit is eating dinner together at the table."
+      ]
+    },
+    {
+      "q": "Do you think personality can change as you grow older? Why / why not?",
+      "re": "Can people change their personality?",
+      "f": ["What can change it?", "Have you changed?"],
+      "expressions": [
+        "Well, I absolutely believe that people can change over time.",
+        "Actually, experiences in life can make you more confident.",
+        "That's an interesting question; I think our basic character stays the same.",
+        "To be honest, I am much less shy now than I was as a child.",
+        "I suppose you learn from your mistakes and become wiser."
+      ]
+    },
+    {
+      "q": "Who is the funniest person in your family? What makes them funny?",
+      "re": "Who is the funniest in your family?",
+      "f": ["Tell me a funny moment.", "Are they funny on purpose?"],
+      "expressions": [
+        "Actually, my uncle is definitely the funniest person I know.",
+        "Well, my dad tells the best jokes, even if they are a bit silly.",
+        "To tell the truth, my younger sister always makes me laugh.",
+        "Let me think... my grandad has a brilliant sense of humour.",
+        "I would say my brother, because he does great impressions of people."
+      ]
+    },
+    {
+      "q": "How is your personality different with friends and with family?",
+      "re": "Are you different with friends vs family?",
+      "f": ["Why is it different?", "Which ‘you’ is the real one?"],
+      "expressions": [
+        "Well, I am probably more relaxed and crazy with my friends.",
+        "Actually, I think I am exactly the same with everyone.",
+        "To be honest, I am a bit more serious when I am with my parents.",
+        "That's an interesting question; I show different sides of myself.",
+        "I suppose I am more talkative when I am hanging out with my mates."
+      ]
+    },
+    {
+      "q": "What is one thing you would like your family to understand better about you?",
+      "re": "What should your family understand about you?",
+      "f": ["How could you tell them?", "What would change?"],
+      "expressions": [
+        "Actually, I wish they understood that I need more privacy.",
+        "Well, I would like them to see that I am growing up and need independence.",
+        "To be honest, I want them to understand my taste in music.",
+        "That's a tricky question; maybe that I study better late at night.",
+        "Let me think... I just wish they wouldn't worry about me so much."
+      ]
+    }
+  ],
+  "home_area": [
+    {
+      "q": "Do you live in a flat or a house? What do you like about it?",
+      "re": "Do you live in a flat or a house? What’s good about it?",
+      "f": ["What don’t you like?", "What is your favourite room?"],
+      "expressions": [
+        "Well, I live in a modern flat, and I really love the balcony.",
+        "Actually, we live in a detached house with a lovely garden.",
+        "To be honest, I live in a small apartment, but it is very cosy.",
+        "That's a good question; my house is great because it is in a quiet area.",
+        "Let me think... I live in a flat, and the best part is the view."
+      ]
+    },
+    {
+      "q": "What is your neighbourhood like: quiet, busy, friendly, boring?",
+      "re": "Describe your neighbourhood.",
+      "f": ["What do people do there?", "Is it safe?"],
+      "expressions": [
+        "Actually, my neighbourhood is quite peaceful and safe.",
+        "Well, it is a very busy area with lots of shops and cafes.",
+        "To tell the truth, it can be a little bit boring for teenagers.",
+        "I would say the people are incredibly friendly and helpful.",
+        "That's an interesting question; it is very noisy because of the traffic."
+      ]
+    },
+    {
+      "q": "Is there a place near your home where you like to spend time?",
+      "re": "Where do you like to go near your home?",
+      "f": ["Who do you go with?", "What do you do there?"],
+      "expressions": [
+        "Well, there is a beautiful park just five minutes away.",
+        "Actually, I love going to the local leisure centre.",
+        "To be honest, I usually just hang out at the shopping centre.",
+        "I suppose my favourite place is the small café down the street.",
+        "Let me see... I spend a lot of time at the football pitch nearby."
+      ]
+    },
+    {
+      "q": "What do you like most about the town or village where you live?",
+      "re": "What’s the best thing about your town/village?",
+      "f": ["What’s the worst thing?", "Would you recommend it?"],
+      "expressions": [
+        "Actually, the best thing is that public transport is excellent.",
+        "Well, I really love the historical buildings in the centre.",
+        "To tell the truth, I like it because all my friends live close by.",
+        "That's an interesting question; the surrounding nature is stunning.",
+        "I would say the local festivals make it a great place to live."
+      ]
+    },
+    {
+      "q": "What is one problem in your neighbourhood?",
+      "re": "What problem does your neighbourhood have?",
+      "f": ["How could it be solved?", "Does it affect you?"],
+      "expressions": [
+        "Well, the biggest problem is definitely the lack of parking spaces.",
+        "Actually, there is quite a lot of litter on the streets sometimes.",
+        "To be honest, public transport doesn't run very often at night.",
+        "I suppose we need more facilities for young people, like a youth club.",
+        "Let me think... the traffic during rush hour is terrible."
+      ]
+    },
+    {
+      "q": "Do you know your neighbours well, or not really?",
+      "re": "Do you know your neighbours?",
+      "f": ["Is that common where you live?", "Would you like to know them better?"],
+      "expressions": [
+        "Actually, we know the family next door very well.",
+        "Well, we always say hello, but we are not close friends.",
+        "To tell the truth, I don't really know anyone in my building.",
+        "That's a good question; my parents chat with them, but I don't.",
+        "I would say we have a very friendly relationship with them."
+      ]
+    },
+    {
+      "q": "Is your home more for relaxing or for studying? Why?",
+      "re": "At home, do you relax or study more?",
+      "f": ["Where do you study?", "What helps you focus?"],
+      "expressions": [
+        "Well, I try to use my bedroom strictly for studying.",
+        "Actually, my home is definitely a place for relaxing after school.",
+        "To be honest, it is a mix of both, depending on the day.",
+        "I suppose the living room is for resting, and my desk is for work.",
+        "Let me think... I find it hard to study at home because it's too comfortable."
+      ]
+    },
+    {
+      "q": "How far is your school from your home, and how do you get there?",
+      "re": "How do you travel to school?",
+      "f": ["How long does it take?", "Do you like the journey?"],
+      "expressions": [
+        "Actually, it is quite near, so I usually just walk.",
+        "Well, I have to catch the bus at 7:30 every morning.",
+        "To tell the truth, my parents drive me because it is far away.",
+        "That's an interesting question; I cycle when the weather is nice.",
+        "I would say it takes about half an hour by underground."
+      ]
+    },
+    {
+      "q": "Would you like to live somewhere else in the future? Where?",
+      "re": "Would you move in the future? Where?",
+      "f": ["City or countryside?", "Why there?"],
+      "expressions": [
+        "Well, I would absolutely love to live in a big city like London.",
+        "Actually, I dream of moving to a house near the seaside.",
+        "To be honest, I am very happy here and want to stay.",
+        "I suppose I would like to live abroad for a few years.",
+        "Let me think... maybe somewhere with a warmer climate!"
+      ]
+    },
+    {
+      "q": "What would you change about your home or neighbourhood if you could?",
+      "re": "If you could change one thing, what would it be?",
+      "f": ["Why that change?", "How would it help people?"],
+      "expressions": [
+        "Actually, I would paint my bedroom a brighter colour.",
+        "Well, I wish we had a bigger garden for our dog.",
+        "That's a great question; I would build a new cinema in our town.",
+        "To tell the truth, I would reduce the amount of traffic on our street.",
+        "I would say planting more trees would make the area much nicer."
+      ]
+    }
+  ],
+  "health_sports": [
+    {
+      "q": "What do you do to stay healthy?",
+      "re": "How do you stay healthy?",
+      "f": ["What’s easy for you?", "What’s difficult?"],
+      "expressions": [
+        "Actually, I try to eat a lot of fresh fruit and vegetables.",
+        "Well, I go for a run in the park twice a week.",
+        "To tell the truth, I avoid eating too much fast food.",
+        "That is an interesting question; I make sure to get eight hours of sleep.",
+        "Let me see... I drink plenty of water and stay active."
+      ]
+    },
+    {
+      "q": "Do you play any sport or do any regular exercise? Why / why not?",
+      "re": "Do you do sport? Why / why not?",
+      "f": ["How often?", "With friends or alone?"],
+      "expressions": [
+        "Well, I play football for a local team every Saturday.",
+        "Actually, I am not very sporty, but I enjoy cycling.",
+        "To be honest, I prefer working out at the gym.",
+        "I suppose I should do more, but I am often too busy with homework.",
+        "Let me think... I go swimming because it is great for the whole body."
+      ]
+    },
+    {
+      "q": "What is your favourite sport to watch and to do?",
+      "re": "What sport do you like to watch and do?",
+      "f": ["Why that sport?", "Who do you watch?"],
+      "expressions": [
+        "Actually, I absolutely love watching tennis matches on TV.",
+        "Well, basketball is my favourite to play because it's so fast.",
+        "To tell the truth, I don't really enjoy watching sports.",
+        "That's a good question; Formula 1 is really exciting to watch.",
+        "I would say volleyball is the most fun to play with friends."
+      ]
+    },
+    {
+      "q": "How important is sleep for you on school days?",
+      "re": "Is sleep important for you on school days?",
+      "f": ["How many hours do you get?", "What happens if you sleep less?"],
+      "expressions": [
+        "Well, it is extremely important, otherwise I cannot concentrate.",
+        "Actually, I always try to be in bed by 10 PM.",
+        "To be honest, I am usually very tired in the mornings.",
+        "I suppose I need at least eight hours to feel fresh.",
+        "Let me think... if I don't sleep well, I get headaches at school."
+      ]
+    },
+    {
+      "q": "What food do you think is healthy but you don’t really like?",
+      "re": "What healthy food do you dislike?",
+      "f": ["Why don’t you like it?", "How could you eat it?"],
+      "expressions": [
+        "Actually, I know broccoli is very good for you, but I hate the taste.",
+        "Well, I really cannot stand eating fish, even though it's healthy.",
+        "To tell the truth, I try to eat spinach, but I don't enjoy it.",
+        "That's an interesting question; I avoid plain yogurt if I can.",
+        "I would say salads can be quite boring without a good dressing."
+      ]
+    },
+    {
+      "q": "How much time do you spend sitting every day?",
+      "re": "How much do you sit every day?",
+      "f": ["When do you sit the most?", "How could you move more?"],
+      "expressions": [
+        "Well, I spend at least six hours sitting at my desk at school.",
+        "Actually, I sit too much, especially when I am doing homework.",
+        "To be honest, I try to stand up and stretch every hour.",
+        "I suppose I spend most of my evening sitting in front of a screen.",
+        "Let me see... I walk a lot, so maybe I don't sit as much as others."
+      ]
+    },
+    {
+      "q": "What do you do when you feel stressed or tired?",
+      "re": "What helps you when you’re stressed or tired?",
+      "f": ["Does sport help?", "Do you talk to someone?"],
+      "expressions": [
+        "Actually, listening to my favourite music helps me to calm down.",
+        "Well, I usually take a hot shower and go straight to bed.",
+        "To tell the truth, talking to my best friend makes me feel better.",
+        "That's a great question; going for a walk clears my head.",
+        "I would say reading a good book helps me to relax completely."
+      ]
+    },
+    {
+      "q": "Is competition good or bad in sports? Why?",
+      "re": "Is competition good or bad in sport?",
+      "f": ["When is it too much?", "What about school sports?"],
+      "expressions": [
+        "Well, I think a little bit of competition motivates people to improve.",
+        "Actually, it can be bad if players become too aggressive.",
+        "To be honest, I prefer playing just for fun and fitness.",
+        "I suppose it teaches you how to win and lose gracefully.",
+        "Let me think... professional competition is exciting, but school sports should be fun."
+      ]
+    },
+    {
+      "q": "Do you think teenagers have enough exercise today? Why / why not?",
+      "re": "Do teenagers exercise enough today?",
+      "f": ["What stops them?", "What could schools do?"],
+      "expressions": [
+        "Actually, I think many teenagers spend too much time on their phones.",
+        "Well, some do, but others have very inactive lifestyles.",
+        "To tell the truth, PE lessons at school are not always enough.",
+        "That's an interesting question; I think we sit down way too much.",
+        "I would say it depends on whether they find a sport they actually enjoy."
+      ]
+    },
+    {
+      "q": "What small change could make your lifestyle healthier?",
+      "re": "What small change would help your health?",
+      "f": ["Would you really do it?", "When will you start?"],
+      "expressions": [
+        "Well, I should definitely drink less sugary cola.",
+        "Actually, going to bed thirty minutes earlier would make a huge difference.",
+        "To be honest, I could easily walk to the shops instead of taking the bus.",
+        "I suppose eating a proper breakfast every morning is a good start.",
+        "Let me think... stretching for ten minutes every day would be great."
+      ]
+    }
+  ],
+  "daily_routine": [
+    {
+      "q": "What time do you usually wake up on school days?",
+      "re": "When do you wake up on school days?",
+      "f": ["Is it easy for you?", "What time do you go to bed?"],
+      "expressions": [
+        "Well, my alarm always goes off at half past six.",
+        "Actually, I have to wake up very early because my school is far away.",
+        "To tell the truth, I find it incredibly difficult to get out of bed.",
+        "That's an interesting question; I usually wake up at 7 AM exactly.",
+        "Let me think... I wake up at 6:45, but I stay in bed for ten more minutes."
+      ]
+    },
+    {
+      "q": "What is the first thing you do in the morning?",
+      "re": "What do you do first in the morning?",
+      "f": ["Do you eat breakfast?", "Do you check your phone?"],
+      "expressions": [
+        "Actually, the very first thing I do is check my messages.",
+        "Well, I usually go straight to the bathroom to wash my face.",
+        "To be honest, I go to the kitchen and make a cup of tea.",
+        "I suppose I always open the window to get some fresh air.",
+        "Let me see... I pack my school bag because I am always in a hurry."
+      ]
+    },
+    {
+      "q": "What part of the school day do you like the most? Why?",
+      "re": "Which part of school do you like most?",
+      "f": ["What subject is it?", "What makes it good?"],
+      "expressions": [
+        "Well, my favourite part is definitely the lunch break.",
+        "Actually, I really enjoy English lessons because we do fun activities.",
+        "To tell the truth, going home at the end of the day is the best feeling!",
+        "That's a good question; I like the mornings when I have the most energy.",
+        "I would say PE lessons, because we get to move around outside."
+      ]
+    },
+    {
+      "q": "What do you usually do after school?",
+      "re": "What do you do after school?",
+      "f": ["Do you have clubs?", "Do you rest first?"],
+      "expressions": [
+        "Actually, I usually have basketball training twice a week.",
+        "Well, I go home, have a snack, and then start my homework immediately.",
+        "To be honest, I just collapse on the sofa and watch some YouTube.",
+        "I suppose I often meet up with my friends in the park.",
+        "Let me think... I have to walk the dog as soon as I get in."
+      ]
+    },
+    {
+      "q": "How much time do you spend on homework every day?",
+      "re": "How long do you do homework?",
+      "f": ["Which subject takes longest?", "Do you study well at home?"],
+      "expressions": [
+        "Well, it usually takes me about an hour and a half.",
+        "Actually, it depends on the day, but normally around two hours.",
+        "To tell the truth, Maths usually takes up most of my time.",
+        "That's an interesting question; I try to finish it as quickly as possible.",
+        "I would say I spend too much time on it because I get easily distracted."
+      ]
+    },
+    {
+      "q": "How much time do you spend on your phone or computer?",
+      "re": "How long are you on your phone/computer?",
+      "f": ["What do you do there?", "Is it too much?"],
+      "expressions": [
+        "Actually, I probably spend around three hours a day on my phone.",
+        "Well, I use my computer a lot for school projects and gaming.",
+        "To be honest, I think I spend way too much time scrolling through social media.",
+        "I suppose it is about two hours, mainly texting my friends.",
+        "Let me think... I try to limit my screen time in the evenings."
+      ]
+    },
+    {
+      "q": "What do you do in the evening to relax?",
+      "re": "How do you relax in the evening?",
+      "f": ["Alone or with others?", "Does it help you sleep?"],
+      "expressions": [
+        "Well, I love to watch an episode of my favourite TV series.",
+        "Actually, reading a book before bed really helps me to relax.",
+        "To tell the truth, I enjoy playing video games to switch off my brain.",
+        "That's a great question; sometimes I just listen to a podcast.",
+        "I would say having a chat with my family in the living room is nice."
+      ]
+    },
+    {
+      "q": "Is your daily routine the same every day, or different?",
+      "re": "Is your routine the same or different?",
+      "f": ["What changes it?", "Weekdays vs weekends?"],
+      "expressions": [
+        "Actually, during the week, my routine is exactly the same every day.",
+        "Well, the weekends are completely different because I sleep in.",
+        "To be honest, it changes a bit depending on my afternoon clubs.",
+        "I suppose it is quite repetitive, which can be a bit boring.",
+        "Let me think... my routine changes a lot during the school holidays."
+      ]
+    },
+    {
+      "q": "What is one thing you waste too much time on?",
+      "re": "What do you waste time on?",
+      "f": ["Why do you do it?", "How could you reduce it?"],
+      "expressions": [
+        "Well, I definitely waste too much time watching short videos online.",
+        "Actually, I spend ages just deciding what to wear in the morning.",
+        "To tell the truth, I often procrastinate when I should be studying.",
+        "That's an interesting question; playing games on my phone takes up hours.",
+        "I would say I waste time worrying about things that don't matter."
+      ]
+    },
+    {
+      "q": "What would your perfect weekday look like?",
+      "re": "Describe your perfect weekday.",
+      "f": ["What would you change?", "What would you keep?"],
+      "expressions": [
+        "Actually, my perfect weekday would start at 10 AM, not 7 AM!",
+        "Well, I would only have subjects like Art and PE at school.",
+        "To be honest, I would love to have zero homework in the afternoon.",
+        "I suppose I would spend the whole evening hanging out with my best friend.",
+        "Let me think... we would have pizza for lunch every single day."
+      ]
+    }
+  ],
+  "environment": [
+    {
+      "q": "Do you recycle at home?",
+      "re": "How do you recycle at home?",
+      "f": ["Why is it important?", "What else could you recycle?"],
+      "expressions": [
+        "Well, we always separate paper, plastic, and glass into different bins.",
+        "Actually, my parents are very strict about recycling everything we can.",
+        "To tell the truth, we try our best, but sometimes it is confusing.",
+        "That's an interesting question; yes, our local council collects recycling weekly.",
+        "Let me think... we even have a compost bin in the garden for food waste."
+      ]
+    },
+    {
+      "q": "Is pollution a problem in your town?",
+      "re": "What about pollution in your town?",
+      "f": ["Is it air or water pollution?", "What causes it?"],
+      "expressions": [
+        "Actually, air pollution from traffic is quite bad in the centre.",
+        "Well, thankfully, we live in a green area, so the air is very clean.",
+        "To be honest, there is a lot of litter in the local parks.",
+        "I suppose the main issue is the noise pollution from the nearby motorway.",
+        "Let me see... the river used to be polluted, but it is much cleaner now."
+      ]
+    },
+    {
+      "q": "Do you use public transport often?",
+      "re": "Do you use buses or trains?",
+      "f": ["Is it expensive?", "Is it reliable?"],
+      "expressions": [
+        "Well, I take the bus to school every single morning.",
+        "Actually, I prefer to walk or cycle because it is better for the environment.",
+        "To tell the truth, public transport here is quite expensive.",
+        "That's a good question; I use the train when I visit the big city.",
+        "I would say I use it a lot, but unfortunately, it is often delayed."
+      ]
+    },
+    {
+      "q": "How do you save energy at home?",
+      "re": "What do you do to save electricity?",
+      "f": ["Do you turn off lights?", "Is your family helpful?"],
+      "expressions": [
+        "Actually, I always make sure to turn off the lights when I leave a room.",
+        "Well, we try not to leave the TV or computer on standby.",
+        "To be honest, we recently installed energy-saving bulbs in the whole house.",
+        "I suppose we also turn the heating down a bit in the winter.",
+        "Let me think... I try to take shorter showers to save hot water."
+      ]
+    },
+    {
+      "q": "Do you buy organic food?",
+      "re": "Is organic food important for you?",
+      "f": ["Is it too expensive?", "Where do you buy it?"],
+      "expressions": [
+        "Well, my mum buys organic vegetables at the local market when she can.",
+        "Actually, I think organic food is a bit too expensive for us to buy every day.",
+        "To tell the truth, I don't really check if the food I eat is organic.",
+        "That's an interesting question; I prefer food that is grown locally.",
+        "I would say it tastes better, but it's not always easy to find."
+      ]
+    },
+    {
+      "q": "Do you like spending time in nature?",
+      "re": "What do you do in nature?",
+      "f": ["Mountains or sea?", "How often do you go?"],
+      "expressions": [
+        "Actually, I absolutely love hiking in the mountains at the weekend.",
+        "Well, walking in the forest always helps me to relax and clear my head.",
+        "To be honest, I prefer the beach, especially when the weather is warm.",
+        "I suppose I don't go out into nature as much as I would like to.",
+        "Let me think... camping is my favourite way to spend time outdoors."
+      ]
+    },
+    {
+      "q": "What is the biggest environmental problem today?",
+      "re": "What's the main issue?",
+      "f": ["How can we fix it?", "Who should do more?"],
+      "expressions": [
+        "Well, I think climate change is definitely the most serious issue.",
+        "Actually, the amount of plastic waste in the oceans is terrible.",
+        "To tell the truth, global warming is causing a lot of extreme weather.",
+        "That's a very difficult question; probably the destruction of the rainforests.",
+        "I would say that people consuming too much is the root of the problem."
+      ]
+    },
+    {
+      "q": "Do you prefer plastic or paper bags?",
+      "re": "Which bag do you use?",
+      "f": ["Why?", "Do you reuse them?"],
+      "expressions": [
+        "Actually, I always try to bring a reusable cotton bag when I go shopping.",
+        "Well, paper bags are definitely much better for the environment.",
+        "To be honest, sometimes I forget and have to buy a plastic one.",
+        "I suppose paper is better, but it breaks easily if it is raining.",
+        "Let me think... supermarkets should ban single-use plastic bags completely."
+      ]
+    },
+    {
+      "q": "Is your school eco-friendly?",
+      "re": "How green is your school?",
+      "f": ["Do they have recycle bins?", "Are there green clubs?"],
+      "expressions": [
+        "Well, we have recycling bins in every single classroom.",
+        "Actually, my school recently installed solar panels on the roof.",
+        "To tell the truth, they print far too much on paper instead of using tablets.",
+        "That's an interesting question; we have an eco-club that plants trees.",
+        "I would say it is okay, but they could definitely do more to save energy."
+      ]
+    },
+    {
+      "q": "Would you like to live in an eco-city?",
+      "re": "Would you live in a very green city?",
+      "f": ["What would it look like?", "What would be different?"],
+      "expressions": [
+        "Actually, I would love that; it sounds very clean and quiet.",
+        "Well, if there were no cars and lots of parks, it would be perfect.",
+        "To be honest, it might be a bit strange at first, but very healthy.",
+        "I suppose the air quality would be amazing compared to normal cities.",
+        "Let me think... yes, especially if the buildings had gardens on the roofs!"
+      ]
+    }
+  ],
+  "work_life": [
+    {
+      "q": "What is your dream job?",
+      "re": "What job do you want?",
+      "f": ["Why this job?", "What skills do you need?"],
+      "expressions": [
+        "Well, I have always wanted to be a software engineer.",
+        "Actually, my absolute dream is to work as a graphic designer.",
+        "To tell the truth, I would love to be a travel journalist and see the world.",
+        "That's a great question; I think being a teacher would be very rewarding.",
+        "Let me think... I want to do something creative, maybe in architecture."
+      ]
+    },
+    {
+      "q": "Would you like to work in an office?",
+      "re": "Is office work for you?",
+      "f": ["Why / why not?", "What is a typical day like?"],
+      "expressions": [
+        "Actually, I think sitting at a desk all day would be quite boring.",
+        "Well, I wouldn't mind it if the office was modern and friendly.",
+        "To be honest, I prefer to have a job where I am moving around.",
+        "I suppose it depends on the colleagues; a good team makes a huge difference.",
+        "Let me see... maybe a mix of working from home and the office."
+      ]
+    },
+    {
+      "q": "Is a high salary important?",
+      "re": "Do you care about money in a job?",
+      "f": ["What else matters?", "Would you work for less if it's fun?"],
+      "expressions": [
+        "Well, you need money to live comfortably, so yes, it is important.",
+        "Actually, I think enjoying what you do is far more important than money.",
+        "To tell the truth, a high salary is great, but not if the job is too stressful.",
+        "That's an interesting question; a good work-life balance is my priority.",
+        "I would say it is important, but a friendly atmosphere matters too."
+      ]
+    },
+    {
+      "q": "Do you want to work abroad?",
+      "re": "Would you work in another country?",
+      "f": ["Which country?", "Why there?"],
+      "expressions": [
+        "Actually, I would love to work in an English-speaking country for a few years.",
+        "Well, gaining international experience would be fantastic for my CV.",
+        "To be honest, I think I would miss my family and friends too much.",
+        "I suppose working abroad could teach me about different cultures.",
+        "Let me think... maybe in the future, if a good opportunity comes up."
+      ]
+    },
+    {
+      "q": "Is teamwork better than working alone?",
+      "re": "Team or solo work?",
+      "f": ["Why?", "Are you a good leader?"],
+      "expressions": [
+        "Well, I prefer teamwork because you can share ideas and solve problems faster.",
+        "Actually, I am quite independent and work much better on my own.",
+        "To tell the truth, it depends on the project; sometimes alone is quicker.",
+        "That's a good question; a good team can achieve amazing things.",
+        "I would say teamwork is fun, but it can be frustrating if someone is lazy."
+      ]
+    },
+    {
+      "q": "What was your first work experience?",
+      "re": "Tell me about your first job.",
+      "f": ["What did you learn?", "Did you like it?"],
+      "expressions": [
+        "Actually, I did some work experience in a local café last summer.",
+        "Well, I haven't had a real job yet, but I sometimes babysit my cousins.",
+        "To be honest, my first job was delivering newspapers, and it was hard work.",
+        "I suppose my first real experience was a school project organizing an event.",
+        "Let me think... I worked as a shop assistant, and it taught me patience."
+      ]
+    },
+    {
+      "q": "How many hours should people work?",
+      "re": "What is a good work schedule?",
+      "f": ["Is 8 hours too much?", "What about 4-day weeks?"],
+      "expressions": [
+        "Well, I think the traditional eight-hour day is a bit too long.",
+        "Actually, a four-day working week sounds like a brilliant idea.",
+        "To tell the truth, it depends on the job, but nobody should work non-stop.",
+        "That's an interesting question; flexible working hours are definitely the future.",
+        "I would say thirty-five hours a week is plenty for a healthy life."
+      ]
+    },
+    {
+      "q": "Do you like wearing a uniform?",
+      "re": "Uniform or casual clothes?",
+      "f": ["Why?", "Does it look professional?"],
+      "expressions": [
+        "Actually, I quite like it because you don't have to choose what to wear.",
+        "Well, I hate uniforms; I prefer to express my personality through clothes.",
+        "To be honest, a uniform looks very professional, but it can be uncomfortable.",
+        "I suppose it is good for certain jobs, like nurses or police officers.",
+        "Let me think... casual clothes are definitely much more comfortable."
+      ]
+    },
+    {
+      "q": "What makes a boss good?",
+      "re": "What is a good manager like?",
+      "f": ["Should they be strict?", "Should they be friendly?"],
+      "expressions": [
+        "Well, a good manager should listen to their employees and be supportive.",
+        "Actually, clear communication and treating everyone fairly are the most important things.",
+        "To tell the truth, they need to be organized but also friendly and approachable.",
+        "That's a great question; a good boss encourages you to learn new skills.",
+        "I would say someone who doesn't micromanage everything you do."
+      ]
+    },
+    {
+      "q": "Are robots going to take all jobs?",
+      "re": "Will AI replace workers?",
+      "f": ["Which jobs are safe?", "Is it scary?"],
+      "expressions": [
+        "Actually, I think AI will take over dangerous or repetitive jobs.",
+        "Well, creative jobs and roles needing human empathy will always be safe.",
+        "To be honest, it is a bit worrying, but new types of jobs will be created.",
+        "I suppose technology changes everything, so we just have to adapt.",
+        "Let me think... they will help us, rather than completely replace us."
+      ]
+    }
+  ],
+  "food_cooking": [
+    {
+      "q": "What is your favorite food?",
+      "re": "What do you love eating?",
+      "f": ["How often do you eat it?", "Can you cook it?"],
+      "expressions": [
+        "Well, my absolute favourite food is traditional Italian pizza.",
+        "Actually, I love eating anything with chicken and rice.",
+        "To tell the truth, I have a sweet tooth, so chocolate is my favourite.",
+        "That's an easy question; a really good hamburger with chips.",
+        "Let me think... I could eat sushi every single day of the week."
+      ]
+    },
+    {
+      "q": "Do you like cooking for others?",
+      "re": "Do you cook for your family?",
+      "f": ["What is your best dish?", "Is it difficult?"],
+      "expressions": [
+        "Actually, I really enjoy cooking dinner for my family on weekends.",
+        "Well, I am not a great cook, but I like baking cakes for my friends.",
+        "To be honest, I prefer eating to cooking, because cooking makes a mess.",
+        "I suppose I like it when people appreciate the meal I prepared.",
+        "Let me see... my signature dish is a spicy tomato pasta."
+      ]
+    },
+    {
+      "q": "Is fast food popular in your country?",
+      "re": "Do people eat much fast food?",
+      "f": ["Is it healthy?", "Why is it popular?"],
+      "expressions": [
+        "Well, yes, unfortunately, there are fast food restaurants on every corner.",
+        "Actually, it is very popular with teenagers because it's cheap and quick.",
+        "To tell the truth, people eat it a lot when they are too busy to cook.",
+        "That's an interesting question; it is popular, but people know it is unhealthy.",
+        "I would say younger generations eat it much more than older people."
+      ]
+    },
+    {
+      "q": "What is a traditional meal in your country?",
+      "re": "Tell me about a local dish.",
+      "f": ["What are the ingredients?", "When do you eat it?"],
+      "expressions": [
+        "Actually, a very famous traditional dish is a rich meat stew with paprika.",
+        "Well, we have a delicious dessert made with sweet cheese and pastry.",
+        "To be honest, traditional food here usually contains a lot of meat and potatoes.",
+        "I suppose the most famous one is a hearty soup that takes hours to cook.",
+        "Let me think... we often eat a special type of cabbage roll at Christmas."
+      ]
+    },
+    {
+      "q": "Do you prefer eating at home or out?",
+      "re": "Home or restaurant?",
+      "f": ["Why?", "Which restaurant is your favorite?"],
+      "expressions": [
+        "Well, I love eating out because you don't have to wash the dishes!",
+        "Actually, home-cooked food is usually much healthier and tastier.",
+        "To tell the truth, going to a restaurant is a nice treat for special occasions.",
+        "That's a good question; it depends on how tired I am in the evening.",
+        "I would say I prefer sitting in a cozy café with my friends."
+      ]
+    },
+    {
+      "q": "Are you a picky eater?",
+      "re": "Do you eat everything?",
+      "f": ["What do you hate?", "Why?"],
+      "expressions": [
+        "Actually, I eat almost everything; I really like trying new flavours.",
+        "Well, I used to be very picky when I was a child, but not anymore.",
+        "To be honest, yes, there are quite a lot of vegetables I refuse to eat.",
+        "I suppose I am a bit difficult because I don't eat any seafood.",
+        "Let me think... I am adventurous with food, unless it is too spicy."
+      ]
+    },
+    {
+      "q": "Is breakfast the most important meal?",
+      "re": "Do you always eat breakfast?",
+      "f": ["What do you eat?", "What if you skip it?"],
+      "expressions": [
+        "Well, for me it is; I can't function properly without a good breakfast.",
+        "Actually, I often skip breakfast because I am not hungry in the morning.",
+        "To tell the truth, I only have time for a quick bowl of cereal.",
+        "That's an interesting question; scientists say it gives you energy for the day.",
+        "I would say a large cup of coffee is the most important part!"
+      ]
+    },
+    {
+      "q": "Do you watch cooking shows?",
+      "re": "Do you like TV chefs?",
+      "f": ["Which show?", "Do you try the recipes?"],
+      "expressions": [
+        "Actually, I love watching baking competitions; they are so relaxing.",
+        "Well, sometimes I watch short recipe videos on social media.",
+        "To be honest, I find cooking shows a bit boring.",
+        "I suppose it is fun to see professional chefs create amazing dishes.",
+        "Let me think... I sometimes try to copy the simple recipes at home."
+      ]
+    },
+    {
+      "q": "Is sugar bad for health?",
+      "re": "Do you eat many sweets?",
+      "f": ["How can we eat less?", "What are the alternatives?"],
+      "expressions": [
+        "Well, too much processed sugar is definitely bad for your teeth and body.",
+        "Actually, you need some sugar for energy, but from fruits, not sweets.",
+        "To tell the truth, I know it is unhealthy, but I am addicted to chocolate.",
+        "That's a great question; reducing sugar makes you feel much more energetic.",
+        "I would say the hidden sugar in fizzy drinks is the biggest problem."
+      ]
+    },
+    {
+      "q": "What is your favorite fruit?",
+      "re": "Which fruit do you like best?",
+      "f": ["Is it easy to find?", "How do you eat it?"],
+      "expressions": [
+        "Actually, my favourite is definitely a sweet, juicy watermelon in the summer.",
+        "Well, I eat an apple or a banana every single day as a snack.",
+        "To be honest, I absolutely love strawberries, especially with a bit of cream.",
+        "I suppose exotic fruits like mango or pineapple are the most delicious.",
+        "Let me think... a cold bunch of grapes is perfectly refreshing."
+      ]
+    }
+  ],
+  "culture_leisure": [
+    {
+      "q": "Do you like going to the cinema?",
+      "re": "How often do you go to movies?",
+      "f": ["What was the last film?", "Who did you go with?"],
+      "expressions": [
+        "Well, I absolutely love the atmosphere of watching a film on the big screen.",
+        "Actually, I rarely go nowadays because streaming services are so convenient.",
+        "To tell the truth, the cinema tickets and popcorn are quite expensive.",
+        "That's an interesting question; I go about once a month with my friends.",
+        "Let me think... I mostly go just to see big action or sci-fi blockbusters."
+      ]
+    },
+    {
+      "q": "What kind of music do you like?",
+      "re": "What is your favorite genre?",
+      "f": ["Who is your favorite artist?", "Do you play an instrument?"],
+      "expressions": [
+        "Actually, I listen to a bit of everything, but mainly pop and rock.",
+        "Well, I am a huge fan of electronic dance music; it gives me energy.",
+        "To be honest, I really enjoy listening to classical music when I study.",
+        "I suppose indie bands are my favourite because the lyrics are very deep.",
+        "Let me see... rap and hip-hop are definitely the genres I listen to most."
+      ]
+    },
+    {
+      "q": "Do you enjoy visiting museums?",
+      "re": "Are museums interesting to you?",
+      "f": ["Which one was the best?", "What did you see?"],
+      "expressions": [
+        "Well, I find history museums fascinating, especially the ancient artifacts.",
+        "Actually, modern art galleries are great, but traditional museums can be boring.",
+        "To tell the truth, I only really go if it is a school trip.",
+        "That's a good question; interactive science museums are really good fun.",
+        "I would say I enjoy them if the exhibition is visually impressive."
+      ]
+    },
+    {
+      "q": "Do you watch much TV?",
+      "re": "How much TV do you watch?",
+      "f": ["What series?", "Is Netflix better?"],
+      "expressions": [
+        "Actually, I don't watch traditional TV channels at all anymore.",
+        "Well, I am currently binge-watching a brilliant series on Netflix.",
+        "To be honest, I prefer watching short videos on YouTube instead.",
+        "I suppose I spend about an hour every evening watching a good show.",
+        "Let me think... I only turn the TV on to watch live sports events."
+      ]
+    },
+    {
+      "q": "Do you like live concerts?",
+      "re": "Have you been to a concert?",
+      "f": ["Who was playing?", "Was it loud?"],
+      "expressions": [
+        "Well, live music is incredible; the energy in the crowd is amazing.",
+        "Actually, I went to a festival last summer and it was an unforgettable experience.",
+        "To tell the truth, I find large concerts a bit too crowded and loud.",
+        "That's an interesting question; seeing my favourite band live was a dream come true.",
+        "I would say small, acoustic gigs in local cafes are the best."
+      ]
+    },
+    {
+      "q": "Is reading better than movies?",
+      "re": "Books or films?",
+      "f": ["Why?", "What was the last book?"],
+      "expressions": [
+        "Actually, I prefer books because you can use your imagination much more.",
+        "Well, films are better if you just want to relax for two hours.",
+        "To be honest, I rarely have the patience to sit and read a whole novel.",
+        "I suppose the book is almost always better than the film adaptation.",
+        "Let me think... both are great, but a good book stays with you longer."
+      ]
+    },
+    {
+      "q": "Do you go to the theater?",
+      "re": "Do you like plays?",
+      "f": ["Is it boring?", "When was the last time?"],
+      "expressions": [
+        "Well, seeing a live play is a very special and elegant experience.",
+        "Actually, I love watching big musicals with singing and dancing.",
+        "To tell the truth, the theatre isn't really my cup of tea; it feels a bit old-fashioned.",
+        "That's a great question; my school took us to see a Shakespeare play recently.",
+        "I would say it is wonderful, but unfortunately, the tickets cost a fortune."
+      ]
+    },
+    {
+      "q": "What is your favorite hobby?",
+      "re": "What do you do for fun?",
+      "f": ["How did you start?", "Is it expensive?"],
+      "expressions": [
+        "Actually, my absolute favourite thing to do is photography.",
+        "Well, in my free time, I love baking all sorts of cakes and biscuits.",
+        "To be honest, gaming is my main hobby; I play online with my friends.",
+        "I suppose drawing and painting help me express my creativity.",
+        "Let me think... learning to play the guitar is my new favourite hobby."
+      ]
+    },
+    {
+      "q": "Do you like famous celebrities?",
+      "re": "Do you follow stars?",
+      "f": ["Who?", "Why?"],
+      "expressions": [
+        "Well, I follow a few actors and singers on social media.",
+        "Actually, I don't really care about celebrity gossip or their private lives.",
+        "To tell the truth, I admire athletes more than movie stars.",
+        "That's an interesting question; some celebrities use their fame for good causes.",
+        "I would say it is fun to read about them, but I wouldn't want to be famous."
+      ]
+    },
+    {
+      "q": "Is cultural life important in your city?",
+      "re": "Are there many events?",
+      "f": ["Festivals?", "Exhibitions?"],
+      "expressions": [
+        "Actually, we have a fantastic summer festival every year.",
+        "Well, the city centre is always full of exhibitions and live music.",
+        "To be honest, it is quite a small town, so there isn't much going on.",
+        "I suppose cultural events bring the community together, which is important.",
+        "Let me think... we have a lovely local theatre and a modern library."
+      ]
+    }
+  ],
+  "science_tech": [
+    {
+      "q": "Which technical device is most useful?",
+      "re": "What's your best gadget?",
+      "f": ["Smartphone or laptop?", "Why?"],
+      "expressions": [
+        "Well, the smartphone is definitely the most essential gadget we have.",
+        "Actually, I couldn't survive without my laptop for school work.",
+        "To tell the truth, wireless headphones are the best invention ever.",
+        "That's an interesting question; a smartwatch is incredibly useful for fitness.",
+        "Let me think... my tablet is perfect for both reading and watching films."
+      ]
+    },
+    {
+      "q": "Do you like science at school?",
+      "re": "Is science a good subject?",
+      "f": ["Biology or Physics?", "Why?"],
+      "expressions": [
+        "Actually, Biology is fascinating because you learn how the human body works.",
+        "Well, Physics is quite difficult for me, especially the complicated formulas.",
+        "To be honest, doing experiments in the Chemistry lab is always fun.",
+        "I suppose I prefer subjects like History or English over science.",
+        "Let me see... science is incredibly important for understanding our world."
+      ]
+    },
+    {
+      "q": "Is technology making us lazy?",
+      "re": "Are we too dependent on tech?",
+      "f": ["Why?", "What could we do without?"],
+      "expressions": [
+        "Well, in some ways yes, because we don't even need to leave the house to shop.",
+        "Actually, I think it makes us more efficient, not necessarily lazy.",
+        "To tell the truth, we rely on our phones too much to remember things.",
+        "That's a good question; GPS is great, but nobody can read a map anymore.",
+        "I would say technology does the hard work so we have more free time."
+      ]
+    },
+    {
+      "q": "What is the best invention ever?",
+      "re": "What's the greatest discovery?",
+      "f": ["Internet or Wheel?", "Why?"],
+      "expressions": [
+        "Actually, the internet has completely changed how human beings communicate.",
+        "Well, the invention of electricity is obviously the foundation of modern life.",
+        "To be honest, vaccines and antibiotics have saved millions of lives.",
+        "I suppose the airplane, because it made the world so much smaller.",
+        "Let me think... the printing press was a huge step forward for education."
+      ]
+    },
+    {
+      "q": "Do you like video games?",
+      "re": "Are you a gamer?",
+      "f": ["Which games?", "Is it a waste of time?"],
+      "expressions": [
+        "Well, I am a huge gamer; I love exploring massive open-world games.",
+        "Actually, I only play simple puzzle games on my phone when I am bored.",
+        "To tell the truth, I think they are a bit of a waste of time.",
+        "That's an interesting question; playing multiplayer games is very sociable.",
+        "I would say they improve your reaction times and problem-solving skills."
+      ]
+    },
+    {
+      "q": "Is social media dangerous?",
+      "re": "What are the risks of apps?",
+      "f": ["Privacy?", "Bullying?"],
+      "expressions": [
+        "Actually, it can be very bad for teenagers' mental health and self-esteem.",
+        "Well, cyberbullying is a huge problem that platforms need to fix.",
+        "To be honest, the biggest danger is fake news spreading incredibly fast.",
+        "I suppose it is safe if you are careful about your privacy settings.",
+        "Let me think... it is a powerful tool, but it can be highly addictive."
+      ]
+    },
+    {
+      "q": "Will we live on Mars?",
+      "re": "Space travel: yes or no?",
+      "f": ["Would you go?", "Is it worth the money?"],
+      "expressions": [
+        "Well, with current technology, I think humans will definitely reach Mars soon.",
+        "Actually, I think we should fix the problems on Earth first.",
+        "To tell the truth, living on another planet sounds like a terrifying idea.",
+        "That's a great question; it would be an incredible scientific achievement.",
+        "I would say maybe in a hundred years, but certainly not in my lifetime."
+      ]
+    },
+    {
+      "q": "Is the internet always right?",
+      "re": "Can we trust everything online?",
+      "f": ["Fake news?", "How to check?"],
+      "expressions": [
+        "Actually, there is a massive amount of false information on the web.",
+        "Well, you must always check the source before you believe an article.",
+        "To be honest, Wikipedia is usually quite accurate, but not 100% perfect.",
+        "I suppose critical thinking is the most important skill in the digital age.",
+        "Let me think... anyone can write anything online, so you have to be careful."
+      ]
+    },
+    {
+      "q": "Do you use AI for school?",
+      "re": "Do you use ChatGPT?",
+      "f": ["Is it cheating?", "How does it help?"],
+      "expressions": [
+        "Well, I sometimes use it to explain complex topics simply.",
+        "Actually, it is a brilliant tool for brainstorming ideas for essays.",
+        "To tell the truth, using it to write your homework is definitely cheating.",
+        "That's an interesting question; it is like having a private tutor 24/7.",
+        "I would say we need to learn how to use it responsibly."
+      ]
+    },
+    {
+      "q": "What tech will we have in 50 years?",
+      "re": "Future tech?",
+      "f": ["Flying cars?", "Teleportation?"],
+      "expressions": [
+        "Actually, I am convinced that all cars will be fully self-driving by then.",
+        "Well, virtual reality will probably be impossible to tell from real life.",
+        "To be honest, we might have robots doing all the housework for us.",
+        "I suppose medical nanotechnology will cure most major diseases.",
+        "Let me think... maybe artificial intelligence will be smarter than humans."
+      ]
+    }
+  ],
+  "finance": [
+    {
+      "q": "Who manages money in your family?",
+      "re": "Who pays the bills?",
+      "f": ["Do you help?", "Do you talk about it?"],
+      "expressions": [
+        "Well, my parents usually sit down together to pay the bills.",
+        "Actually, my mum is much better at budgeting, so she handles it.",
+        "To tell the truth, we don't really discuss finances at the dinner table.",
+        "That's an interesting question; they manage it, but they teach me about saving.",
+        "Let me think... my dad keeps track of all the household expenses."
+      ]
+    },
+    {
+      "q": "Do you get pocket money?",
+      "re": "Do you have your own money?",
+      "f": ["How much?", "What do you buy?"],
+      "expressions": [
+        "Actually, I get a small allowance every week if I do my chores.",
+        "Well, my parents transfer some money to my bank card every month.",
+        "To be honest, I only ask for money when I specifically need to buy something.",
+        "I suppose I spend most of my pocket money on snacks and cinema tickets.",
+        "Let me see... I try to save half of what I receive."
+      ]
+    },
+    {
+      "q": "Is it important to save money?",
+      "re": "Should we save for the future?",
+      "f": ["What are you saving for?", "Is it hard?"],
+      "expressions": [
+        "Well, it is absolutely crucial to have some savings for emergencies.",
+        "Actually, I am currently saving up to buy a new laptop.",
+        "To tell the truth, it is quite difficult to save when everything is so expensive.",
+        "That's a good question; developing a saving habit young is very smart.",
+        "I would say yes, because you never know what the future holds."
+      ]
+    },
+    {
+      "q": "Is life expensive today?",
+      "re": "Are prices too high?",
+      "f": ["What is most expensive?", "How can we save?"],
+      "expressions": [
+        "Actually, inflation has made basic things like food much more expensive.",
+        "Well, the cost of living seems to go up a little bit every single year.",
+        "To be honest, buying a house or a flat seems almost impossible for young people.",
+        "I suppose transport and energy bills take up a huge part of a budget.",
+        "Let me think... yes, going out to restaurants has become a real luxury."
+      ]
+    },
+    {
+      "q": "Should kids learn about money?",
+      "re": "Finance at school?",
+      "f": ["Why?", "What should they learn?"],
+      "expressions": [
+        "Well, financial literacy should definitely be a mandatory subject in schools.",
+        "Actually, teenagers need to learn how taxes and bank loans work.",
+        "To tell the truth, many young adults leave school with no idea how to budget.",
+        "That's a great question; learning to manage debt is incredibly important.",
+        "I would say parents should also teach their kids the value of money early on."
+      ]
+    },
+    {
+      "q": "Do you like shopping?",
+      "re": "Is shopping a hobby?",
+      "f": ["Online or shops?", "Why?"],
+      "expressions": [
+        "Actually, I really enjoy buying new clothes, especially during the sales.",
+        "Well, I prefer online shopping because it is much more convenient.",
+        "To be honest, I hate crowded shopping centres, so I try to avoid them.",
+        "I suppose window shopping with friends is a fun way to spend an afternoon.",
+        "Let me think... I only go shopping when I absolutely need something new."
+      ]
+    },
+    {
+      "q": "Is money the most important thing?",
+      "re": "Can money buy happiness?",
+      "f": ["What is better?", "Why?"],
+      "expressions": [
+        "Well, money gives you freedom and security, but health is definitely more important.",
+        "Actually, you can't buy genuine friendship or a happy family with money.",
+        "To tell the truth, poverty causes a lot of stress, so a basic income is vital.",
+        "That's a deep question; money solves practical problems, but not emotional ones.",
+        "I would say experiences and memories matter much more than material wealth."
+      ]
+    },
+    {
+      "q": "Do you use a bank card?",
+      "re": "Card or cash?",
+      "f": ["Why?", "Is cash disappearing?"],
+      "expressions": [
+        "Actually, I use my smartphone or contactless card to pay for almost everything.",
+        "Well, I hardly ever carry cash anymore; cards are just so much easier.",
+        "To be honest, I think paying with cash helps you realize how much you are spending.",
+        "I suppose cash will eventually disappear completely in the next ten years.",
+        "Let me think... using a banking app helps me track my expenses perfectly."
+      ]
+    },
+    {
+      "q": "What would you buy if you were rich?",
+      "re": "Lottery win?",
+      "f": ["A house?", "A car?"],
+      "expressions": [
+        "Well, the very first thing I would do is travel around the entire world.",
+        "Actually, I would buy a huge house for my parents so they could relax.",
+        "To tell the truth, I would probably invest most of the money to be secure.",
+        "That's an interesting question; I would definitely donate a large amount to charity.",
+        "I would say I would buy a fast sports car, just for fun!"
+      ]
+    },
+    {
+      "q": "Is it okay to borrow money?",
+      "re": "Should we take loans?",
+      "f": ["From friends?", "From banks?"],
+      "expressions": [
+        "Actually, borrowing money from friends can easily ruin a good relationship.",
+        "Well, taking out a student loan is often necessary to get a university degree.",
+        "To be honest, buying things on credit is dangerous if you can't afford the repayments.",
+        "I suppose a mortgage is the only loan that really makes financial sense.",
+        "Let me think... you should always live within your means and avoid debt."
+      ]
+    }
+  ]
+}
