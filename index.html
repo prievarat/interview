@@ -124,13 +124,13 @@
       display:flex; justify-content:space-between; align-items:center; gap:.75rem;
       padding: .1rem 0 .75rem 0;
     }
-    /* New styling for expression hints */
+    /* Styling for expression hints */
     .vocab-pill {
       display:block;
       width: 100%;
       padding: 0.8rem 1rem;
       border-radius: 8px;
-      background: rgba(43, 182, 180, 0.1); /* Light secondary-500 */
+      background: rgba(43, 182, 180, 0.1); 
       border-left: 4px solid var(--secondary-500);
       color: var(--secondary-700);
       font-weight: 600;
@@ -489,7 +489,7 @@ function selectedTopics(){
   return el.topicChecks.filter(c => c.checked).map(c => c.value);
 }
 
-// CHANGED: Validation now only requires at least 1 topic selected.
+// Validation allows 1 or more topics
 function validateTopics(){
   const chosen = selectedTopics();
   const ok = chosen.length >= 1;
@@ -567,14 +567,14 @@ function renderQuestion(){
 
   el.vocabWrap.classList.add("hidden");
   
-  // CHANGED: Now pulls 2 random expressions from the new 'expressions' array in db.json
+  // CHANGED: Removed the .slice(0,2) to show all shuffled expressions!
   if (item.expressions && item.expressions.length > 0) {
-      const shuffledExpr = shuffle(item.expressions).slice(0, 2);
+      const shuffledExpr = shuffle(item.expressions); 
       el.vocabList.innerHTML = shuffledExpr.map(exp => `<span class="vocab-pill">"${exp}"</span>`).join("");
       el.btnVocab.classList.remove("hidden");
   } else {
       el.vocabList.innerHTML = "<span class='vocab-pill'>No hints available for this question.</span>";
-      el.btnVocab.classList.add("hidden"); // Hide button if no expressions exist
+      el.btnVocab.classList.add("hidden"); 
   }
 
   el.chipTopic.textContent = `Topic: ${prettyTopic(pick.topicKey)}`;
